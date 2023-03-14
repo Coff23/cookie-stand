@@ -4,6 +4,10 @@ h1{
     color: red;
 }
 
+a{
+    color: yellow;
+}
+
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: yellow;
