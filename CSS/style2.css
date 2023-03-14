@@ -1,11 +1,18 @@
-
-h1{
+h1 {
     font-family: sans-serif;
     color: red;
 }
 
-h2{
+h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: yellow;
     background-color: blue;
+}
+
+table{
+    background-color: gray;
+}
+
+tr{
+    border: thin solid black;
 }

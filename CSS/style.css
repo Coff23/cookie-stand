@@ -1,14 +1,13 @@
-
-h1{
+h1 {
     font-family: sans-serif;
     color: red;
 }
 
-a{
+a {
     color: yellow;
 }
 
-body{
+body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: yellow;
     background-color: blue;
