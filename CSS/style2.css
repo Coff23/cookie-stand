@@ -1,6 +1,10 @@
 h1 {
     font-family: sans-serif;
-    color: red;
+    color: white;
+}
+
+a {
+    color: silver;
 }
 
 h2 {
@@ -9,10 +13,38 @@ h2 {
     background-color: blue;
 }
 
+body{
+    background-color: rgb(7, 11, 24);
+
+}
+
+main{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
 table{
-    background-color: gray;
+    border: thin solid whitesmoke;
+    max-width: 100%;
+    background-color: 7,11,24;
+    color: white;
+}
+
+th{
+    position: relative;
+    text-align: center;
 }
 
 tr{
-    border: thin solid black;
+    border: thin solid whitesmoke;
+}
+
+td{
+    border: thin solid whitesmoke;
+}
+
+footer{
+    text-align: center;
+    color: white;
 }

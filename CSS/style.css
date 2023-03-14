@@ -1,14 +1,26 @@
 h1 {
     font-family: sans-serif;
-    color: red;
+    color: white;
 }
 
 a {
-    color: yellow;
+    color: silver;
 }
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: yellow;
-    background-color: blue;
+    color: white;
+    background-color: rgb(7,11,24);
+}
+
+#intro {
+    text-align: center;
+}
+
+footer {
+
+}
+
+#me {
+    text-align: center;
 }
