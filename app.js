@@ -2,8 +2,6 @@
 
 let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
 let rngNumbers = [];
-console.log(hours);
-console.log(rngNumbers);
 
 function generateBetween(a, b) {
     return Math.ceil(Math.random() * (b - a + 1)) + a;
