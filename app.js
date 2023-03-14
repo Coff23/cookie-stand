@@ -4,8 +4,6 @@ let hours = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "
 let rngNumbers = [];
 console.log(hours);
 console.log(rngNumbers);
-// let cookiesPerHour = [];
-// console.log(cookiesPerHour);
 
 function generateBetween(a, b) {
     return Math.ceil(Math.random() * (b - a + 1)) + a;
