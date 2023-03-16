@@ -70,6 +70,7 @@ body {
 
 ul {
     list-style-type: none;
+    line-height: 25px;
 }
 
 #me {

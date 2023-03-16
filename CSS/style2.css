@@ -45,11 +45,13 @@ th{
 }
 
 tr{
-    border: thin solid whitesmoke;
+    border-bottom: thin solid whitesmoke;
+    font-weight: bold;
 }
 
 td{
-    border: thin solid whitesmoke;
+    border-bottom: thin solid whitesmoke;
+    padding: 12px 15px;
 }
 
 footer{
