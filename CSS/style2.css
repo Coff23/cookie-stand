@@ -1,13 +1,39 @@
 h1 {
+    font-size: 45px;
     font-family: sans-serif;
     color: white;
     padding-left: 20px;
 }
 
+div {
+    display: flex;
+    flex-direction: row;
+}
+
 a {
-    color: silver;
+    font-size: 25px;
+    color: white;
     float: right;
     padding-right: 20px;
+}
+
+
+legend {
+    color: white;
+    font-size: 20px;
+}
+
+section {
+    border-bottom: thin solid white;
+}
+
+label {
+    color: white;
+    line-height: 30px;
+}
+
+input {
+    border-style: none;
 }
 
 img {
@@ -21,40 +47,40 @@ h2 {
     background-color: blue;
 }
 
-body{
+body {
     background-color: rgb(7, 11, 24);
 
 }
 
-main{
+main {
     margin-top: 100px;
     display: flex;
     justify-content: center;
 }
 
-table{
+table {
     border: thin solid whitesmoke;
     max-width: 100%;
-    background-color: 7,11,24;
+    background-color: 7, 11, 24;
     color: white;
 }
 
-th{
+th {
     position: relative;
     text-align: center;
 }
 
-tr{
+tr {
     border-bottom: thin solid whitesmoke;
     font-weight: bold;
 }
 
-td{
+td {
     border-bottom: thin solid whitesmoke;
     padding: 12px 15px;
 }
 
-footer{
+footer {
     text-align: center;
     color: white;
 }
