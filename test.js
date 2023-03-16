@@ -42,6 +42,7 @@ locations.prototype.hourlyCookies = function () {  // function to generate rando
         let hourlyCookies = this.averagePurchase * rngNum[0];
         this.cookiesPerHour.push(Math.ceil(rngNum * this.averagePurchase));
         this.totalCookies += this.cookiesPerHour[i];
+
     }
     console.log(this.totalCookies);
 }
@@ -53,7 +54,6 @@ locations.prototype.drawRow = function () {  // function to create table row for
     let tdcity = document.createElement('td');
     tdcity.textContent = this.locationCity;
     tableRow.appendChild(tdcity);
-    let totalCookiesDown = 0;
 
     for (let i = 0; i < hours.length; i++) {
 
@@ -67,6 +67,29 @@ locations.prototype.drawRow = function () {  // function to create table row for
     tdTotalCookiesNum.textContent = this.totalCookies;
     tableRow.appendChild(tdTotalCookiesNum);
     body.appendChild(tableRow);
+}
+
+locations.prototype.displayTableFooter = function () {  // function to create table footer
+    let tableFooter = document.createElement("tr");
+    let tdTotalCookies = document.createElement("td");
+    tdTotalCookies.textContent = "Total";
+    tableFooter.appendChild(tdTotalCookies);
+    body.appendChild(tableFooter);
+    let grandtotal = 0;
+    for (let i = 0; i < hours.length; i++) {
+        const totalCell2 = document.createElement('td');
+        let storeTotalCookies = 0;
+        for (let j = 0; j < stores.length; j++) {
+            storeTotalCookies += stores[j].cookiesPerHour[i];
+            grandtotal += stores[j].cookiesPerHour[i];
+        }
+        totalCell2.textContent = storeTotalCookies;
+        tableFooter.appendChild(totalCell2);
+    }
+    const totalCell3 = document.createElement('td');
+    totalCell3.textContent = grandtotal;
+    tableFooter.appendChild(totalCell3);
+    console.log(grandtotal);
 }
 
 let tdTotalCookies = document.createElement("td");
@@ -88,22 +111,5 @@ paris.drawRow();
 
 let lima = new locations("Lima", 2, 16, 4.6);
 lima.drawRow();
+lima.displayTableFooter();
 
-const tableDataTotal = document.createElement("td");
-let tdTotalAcross = document.createElement("td");
-tdTotalAcross.textContent = "Total";
-tableDataTotal.appendChild(tdTotalAcross);
-body.appendChild(tableDataTotal);
-
-// locations.prototype.totalCookiesDown = function () {
-//     let totalDown = [];
-//     for (let i = 0; i < hours.length; i++) {
-//         totalDown = seattle.cookiesPerHour[i] + tokyo.cookiesPerHour[i] + dubai.cookiesPerHour[i] + paris.cookiesPerHour[i] + lima.cookiesPerHour[i];
-//         console.log(totalDown);
-
-//         let tdCookiesDown = document.createElement("td");
-//         tdCookiesDown.textContent = totalDown;
-//         this.tableRow.appendChild(tdCookiesDown);
-//         body.appendChild(this.tableRow);
-//     }
-// }

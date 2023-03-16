@@ -5,6 +5,12 @@ h1 {
 
 a {
     color: silver;
+    float: right;
+    padding-right: 20px;
+}
+
+img {
+    width: 50px;
 }
 
 h2 {

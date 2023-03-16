@@ -1,26 +1,76 @@
+.row {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+}
+
+head {
+    color: white;
+}
+
 h1 {
-    font-family: sans-serif;
     color: white;
 }
 
 a {
-    color: silver;
+    float: right;
+    color: white;
+}
+
+.our-cookies {
+    padding: 30px;
+    width: fit-content;
+}
+
+#logo {
+    width: 50px;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
     background-color: rgb(7,11,24);
+    height: fit-content;
+    width: 88%;
+    margin: 0 auto;
+    height: calc(100vh - 200px);
+}
+
+#row1 {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#row2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#row3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #intro {
     text-align: center;
 }
 
-footer {
+#chinook {
+    width: 50px;
+}
 
+ul {
+    list-style-type: none;
 }
 
 #me {
     text-align: center;
+}
+
+footer {
+    color: white;
 }
