@@ -6,6 +6,11 @@
     margin: 30px;
 }
 
+p {
+    line-height: 30px;
+    font-size: 20px;
+}
+
 head {
     color: white;
 }
