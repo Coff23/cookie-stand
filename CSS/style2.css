@@ -1,6 +1,7 @@
 h1 {
     font-family: sans-serif;
     color: white;
+    padding-left: 20px;
 }
 
 a {
@@ -11,6 +12,7 @@ a {
 
 img {
     width: 50px;
+    padding-left: 23px;
 }
 
 h2 {
