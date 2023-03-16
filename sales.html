@@ -16,20 +16,49 @@
         <a href="index.html">Home</a>
     </header>
     <main id="main">
-        <table id="total-cookies-table">
-            <thead>
-                <tr>
-                    <th>Cookies</th>
-                </tr>
-            </thead>
-            <tbody id="values">
-            </tbody>
-        </table>
+        <div>
+            <table id="total-cookies-table">
+                <thead>
+                    <tr>
+                        <th>Cookies</th>
+                    </tr>
+                </thead>
+                <tbody id="values">
+
+                </tbody>
+                <tfoot id="footer-row">
+
+                </tfoot>
+            </table>
+            <form id="new-store-form">
+                <fieldset>
+                    <legend>Enter Your Store Here</legend>
+                    <section>
+                        <label for="location-input">Location: </label>
+                        <input type="text" id="location-input" name="location_city" placeholder="Type location here:">
+                    </section>
+                    <section>
+                        <label for="min-input">Minimum customers per hour: </label>
+                        <input type="number" id="min-input" name="min_cust" placeholder="0">
+                    </section>
+                    <section>
+                        <label for="max-input">Maximum customer per hour: </label>
+                        <input type="number" id="max-input" name="max_cust" placeholder="0">
+                    </section>
+                    <section>
+                        <label for="average-input">Purchase size per hour: </label>
+                        <input type="number" id="shirt-input" name="av_cust" placeholder="0">
+                    </section>
+                    <section>
+                        <button id="submit-button">Submit Data</button>
+                    </section>
+                </fieldset>
+            </form>
+        </div>
     </main>
     <footer>
         <p id="me">Made by Joshua Coffey</p>
-        <script src="test.js"></script>
-        <script src="app.js"></script>
+        <script src="JS/test.js"></script>
     </footer>
 
 </body>

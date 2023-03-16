@@ -3,6 +3,7 @@
 let tableContent = [];
 const tableBody = document.getElementById("table-body");
 const body = document.getElementById("values");
+const footer = document.getElementById("footer-row");
 
 let hours = ["6 am", "7 am", "8 am", "9 am", "10 am", "11 am", "12 pm", "1 pm", "2 pm", "3 pm", "4 pm", "5 pm", "6 pm", "7 pm"];
 let rngNumbers = [];
@@ -69,12 +70,11 @@ locations.prototype.drawRow = function () {  // function to create table row for
     body.appendChild(tableRow);
 }
 
-locations.prototype.displayTableFooter = function () {  // function to create table footer
-    let tableFooter = document.createElement("tr");
+let displayTableFooter = function () {  // function to create table footer
+    footer.innerHTML = "";
     let tdTotalCookies = document.createElement("td");
     tdTotalCookies.textContent = "Total";
-    tableFooter.appendChild(tdTotalCookies);
-    body.appendChild(tableFooter);
+    footer.appendChild(tdTotalCookies);
     let grandtotal = 0;
     for (let i = 0; i < hours.length; i++) {
         const totalCell2 = document.createElement('td');
@@ -84,11 +84,11 @@ locations.prototype.displayTableFooter = function () {  // function to create ta
             grandtotal += stores[j].cookiesPerHour[i];
         }
         totalCell2.textContent = storeTotalCookies;
-        tableFooter.appendChild(totalCell2);
+        footer.appendChild(totalCell2);
     }
-    const totalCell3 = document.createElement('td');
-    totalCell3.textContent = grandtotal;
-    tableFooter.appendChild(totalCell3);
+    const grandTotalAll = document.createElement('td');
+    grandTotalAll.textContent = grandtotal;
+    footer.appendChild(grandTotalAll);
     console.log(grandtotal);
 }
 
@@ -96,6 +96,28 @@ let tdTotalCookies = document.createElement("td");
 tdTotalCookies.textContent = "Total";
 tableRowHours.appendChild(tdTotalCookies);
 body.appendChild(tableRowHours);
+
+let formEl = document.getElementById("new-store-form");
+
+formEl.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("form submitted");
+
+    let {location_city, min_cust, max_cust, av_cust} = event.target;
+
+    console.log(location_city.value, min_cust.value, max_cust.value, av_cust.value);
+
+    let newLocations = new locations(
+        location_city.value,
+        parseInt(min_cust.value),
+        parseInt(max_cust.value),
+        parseInt(av_cust.value)
+    );
+    stores.push(newLocations); 
+    newLocations.drawRow();
+
+    displayTableFooter();
+});
 
 let seattle = new locations("Seattle", 23, 65, 6.3);
 seattle.drawRow();
@@ -111,5 +133,4 @@ paris.drawRow();
 
 let lima = new locations("Lima", 2, 16, 4.6);
 lima.drawRow();
-lima.displayTableFooter();
-
+displayTableFooter();

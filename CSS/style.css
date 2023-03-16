@@ -16,12 +16,15 @@ head {
 }
 
 h1 {
+    font-size: 45px;
     color: white;
 }
 
 a {
+    font-size: 25px;
     float: right;
     color: white;
+    padding-left: 50px;
 }
 
 .our-cookies {
