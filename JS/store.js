@@ -19,9 +19,9 @@ let totalCost = function () {
     for (let i = 0; i < cart; i++){
         let cost = 0;
         if (cart[i] == cookie){
-            let cost = cookie * 1;
+            let cost = this.cookies * 1;
         }else if (cart[i] == shirt) {
-            let cost = shirt * 1;
+            let cost = this.shirts * 1;
         }
         console.log(cost);
     }
