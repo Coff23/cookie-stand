@@ -17,9 +17,13 @@ function orders (name, address, cookies, shirts, specialInstructions) {
 
 let totalCost = function () {
     for (let i = 0; i < cart; i++){
+        let cost = 0;
         if (cart[i] == cookie){
-            let cost = this.cookies * cookie
+            let cost = cookie * 1;
+        }else if (cart[i] == shirt) {
+            let cost = shirt * 1;
         }
+        console.log(cost);
     }
 }
 totalCost();
